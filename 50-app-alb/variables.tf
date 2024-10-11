@@ -14,9 +14,9 @@ variable "common_tags" {
     }
 }
 
-variable "rds_tags" {
+variable "app_alb_tags" {
     default = {
-        Component = "mysql"
+       component = "app-alb"
     }
 }
 
