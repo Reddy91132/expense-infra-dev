@@ -1,19 +1,22 @@
 variable "project_name" {
     default = "expense"
-
 }
 
 variable "environment" {
     default = "dev"
-
 }
+
+variable "vpc_cidr" {
+    default = "10.0.0.0/16"
+}
+
 variable "common_tags" {
     default = {
         Project = "expense"
         Terraform = "true"
-        environment = "dev"
+        Environment = "dev"
     }
-} 
+}
 
 variable "public_subnet_cidrs" {
     default = ["10.0.1.0/24", "10.0.2.0/24"]
@@ -29,8 +32,4 @@ variable "database_subnet_cidrs" {
 
 variable "is_peering_required" {
     default = true
-}
-
-variable "vpc_cidr" {
- default = "10.0.0.0/16"
 }
